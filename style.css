@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #31343f;
+  color: #f4f4f8;
+  font-family: monospace, "Courier New", Courier, monospace;
+}
+
+header h1 {
+  font-size: 2rem;
+  background: linear-gradient(130deg, #292b37, #131620);
+  padding: 1.25rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 320px;
+  margin: 2rem auto;
+  font-family: "Courier New", Courier, monospace;
+  justify-content: center;
+}
+
+.sectionUs,
+.sectionThey {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper span {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+}
+
+.wrapper h2 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 65px;
+  font-weight: bold;
+  background: #1f2128;
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 1rem;
+  min-width: 158px;
+  border-radius: 5px;
+}
+
+.btnPlus,
+.btnLess {
+  background-color: #1f2128;
+  border-radius: 5px;
+  padding: 10px 2rem;
+  outline: none;
+  color: #f4f4f8;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 65px;
+  font-weight: bold;
+  border: none;
+  max-width: 108px;
+  cursor: pointer;
+  margin: 1rem 2rem;
+}
+.btnPlus {
+  border: 2px solid #13ebb7;
+}
+.btnLess {
+  border: 2px solid crimson;
+}
+
+.winUs,
+.winThey {
+  background-color: #1f2128;
+  border-radius: 5px;
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.45);
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 158px;
+  text-align: center;
+}
+.winUs span,
+.winThey span {
+  font-size: 1.5rem;
+}
+
+.wrapper p {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.btnReset {
+  width: 200px;
+  margin: 0 auto;
+  grid-column: 1 / -1;
+  border: none;
+  outline: none;
+  background: linear-gradient(130deg, #292b37, #131620);
+  box-shadow: 4px 4px 7px rgb(0 0 0 / 40%);
+  padding: 0.6rem;
+  font-family: monospace, "Courier New", Courier, monospace;
+  font-size: 1.25rem;
+  color: #f4f4f8;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
