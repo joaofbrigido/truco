@@ -10,14 +10,6 @@ body {
   font-family: monospace, "Courier New", Courier, monospace;
 }
 
-header h1 {
-  font-size: 2rem;
-  background: linear-gradient(130deg, #292b37, #131620);
-  padding: 1.25rem;
-  text-align: center;
-  font-weight: bold;
-}
-
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
