@@ -33,40 +33,47 @@ const resetScoreboard = () => {
 };
 resetScoreboard();
 
-const addScoreUs = () => {
-  scoreUs++;
-  scoreboardUs.innerHTML = scoreUs;
-
-  if (scoreUs >= 12) {
+const handleGamesWinsUs = (score) => {
+  if (score >= 12) {
     resetScoreboard();
     alert("Nós Vencemos");
     gameWinsUs++;
     scoreboardWinUs.innerHTML = gameWinsUs;
   }
 };
-const addScoreThey = () => {
-  scoreThey++;
-  scoreboardThey.innerHTML = scoreThey;
 
-  if (scoreThey >= 12) {
+const handleGamesWinsThey = (score) => {
+  if (score >= 12) {
     resetScoreboard();
     alert("Eles Venceram");
     gameWinsThey++;
     scoreboardWinThey.innerHTML = gameWinsThey;
   }
 };
+if (btnPlusUs && btnLessUs && btnPlusThey && btnLessThey && btnReset) {
+  const addScoreUs = () => {
+    scoreUs++;
+    scoreboardUs.innerHTML = scoreUs;
+    handleGamesWinsUs(scoreUs);
+  };
+  const addScoreThey = () => {
+    scoreThey++;
+    scoreboardThey.innerHTML = scoreThey;
+    handleGamesWinsThey(scoreThey);
+  };
 
-const lessScoreUs = () => {
-  scoreUs--;
-  scoreUs < 0 ? (scoreUs = 0) : (scoreboardUs.innerHTML = scoreUs);
-};
-const lessScoreThey = () => {
-  scoreThey--;
-  scoreThey < 0 ? (scoreThey = 0) : (scoreboardThey.innerHTML = scoreThey);
-};
+  const lessScoreUs = () => {
+    scoreUs--;
+    scoreUs < 0 ? (scoreUs = 0) : (scoreboardUs.innerHTML = scoreUs);
+  };
+  const lessScoreThey = () => {
+    scoreThey--;
+    scoreThey < 0 ? (scoreThey = 0) : (scoreboardThey.innerHTML = scoreThey);
+  };
 
-btnPlusUs.addEventListener("click", addScoreUs);
-btnLessUs.addEventListener("click", lessScoreUs);
-btnPlusThey.addEventListener("click", addScoreThey);
-btnLessThey.addEventListener("click", lessScoreThey);
-btnReset.addEventListener("click", resetAll);
+  btnPlusUs.addEventListener("click", addScoreUs);
+  btnLessUs.addEventListener("click", lessScoreUs);
+  btnPlusThey.addEventListener("click", addScoreThey);
+  btnLessThey.addEventListener("click", lessScoreThey);
+  btnReset.addEventListener("click", resetAll);
+}
